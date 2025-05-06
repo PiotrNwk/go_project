@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"net/http"
 	"os"
 
@@ -11,9 +10,11 @@ import (
 func main() {
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8080" // Fallback locally
+		port = "8080"
 	}
 
-	http.HandleFunc("/", api.Handler) // your handler here
-	log.Fatal(http.ListenAndServe(":"+port, nil))
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+	http.HandleFunc("/", api.Handler)
+
+	http.ListenAndServe(":"+port, nil)
 }

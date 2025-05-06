@@ -1,18 +1,19 @@
 package main
 
 import (
+	"log"
 	"net/http"
+	"os"
 
 	"github.com/PiotrNwk/WebDev/tree/main/go/api"
 )
 
 func main() {
-	// Serve static files from the "static" directory
-	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080" // Fallback locally
+	}
 
-	// Route root URL to your handler
-	http.HandleFunc("/", api.Handler)
-
-	// Start the web server
-	http.ListenAndServe(":8080", nil)
+	http.HandleFunc("/", api.Handler) // your handler here
+	log.Fatal(http.ListenAndServe(":"+port, nil))
 }

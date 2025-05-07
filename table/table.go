@@ -1,8 +1,8 @@
 package table
 
 import (
+	"bytes"
 	"html/template"
-	"net/http"
 )
 
 type Row struct {
@@ -11,43 +11,39 @@ type Row struct {
 	Email string
 }
 
-// TableHandler serves the HTML table
-func TableHandler(w http.ResponseWriter, r *http.Request) {
-	// Sample data for the table
+func GenerateTable() template.HTML {
 	data := []Row{
 		{"Alice", 30, "alice@example.com"},
 		{"Bob", 25, "bob@example.com"},
 		{"Charlie", 35, "charlie@example.com"},
 	}
 
-	// Define the HTML template
 	tmpl := `
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>HTML Table</title>
-    </head>
-    <body>
-        <h1>Users</h1>
-        <table border="1">
-            <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Email</th>
-            </tr>
-            {{range .}}
-            <tr>
-                <td>{{.Name}}</td>
-                <td>{{.Age}}</td>
-                <td>{{.Email}}</td>
-            </tr>
-            {{end}}
+        <table class="table-auto border-collapse border border-gray-300 w-full bg-white shadow-md rounded-lg">
+            <thead>
+                <tr class="bg-gray-200">
+                    <th class="border border-gray-300 px-4 py-2 text-left">Name</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Age</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{range .}}
+                <tr class="hover:bg-gray-100">
+                    <td class="border border-gray-300 px-4 py-2">{{.Name}}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{.Age}}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{.Email}}</td>
+                </tr>
+                {{end}}
+            </tbody>
         </table>
-    </body>
-    </html>
     `
 
-	// Parse and execute the template
 	t := template.Must(template.New("table").Parse(tmpl))
-	t.Execute(w, data)
+	var buf bytes.Buffer
+	err := t.Execute(&buf, data)
+	if err != nil {
+		return ""
+	}
+	return template.HTML(buf.String())
 }

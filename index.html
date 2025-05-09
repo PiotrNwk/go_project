@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>{{.Title}}</title>
+  <head>
+    <title>Dynamic Table</title>
     <script src="/static/script.js" defer></script>
-</head>
-<body>
-    <h1>{{.Title}}</h1>
-    <button id="add">Add Paragraph</button>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <h1 class="text-2xl font-bold italic mb-4">{{.Title}}</h1>
+    <button
+      id="add"
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow"
+    >
+      Add Paragraph
+    </button>
     <div id="container"></div>
-</body>
+    <div class="container mx-auto p-4">
+      <h1 class="text-2xl font-bold italic mb-4">Users</h1>
+      {{.Table}}
+    </div>
+  </body>
 </html>

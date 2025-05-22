@@ -15,10 +15,10 @@ func main() {
 	}
 
 	// Serve the static folder
-	fs := http.FileServer(http.Dir("./client/public"))
-	http.Handle("/client/public/", http.StripPrefix("/client/public", fs))
+	fs := http.FileServer(http.Dir("./client/dist"))
+	http.Handle("/", fs)
 
-	tmpl := template.Must(template.ParseFiles("./client/public/index.html"))
+	tmpl := template.Must(template.ParseFiles("./client/dist/index.html"))
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		data := struct {

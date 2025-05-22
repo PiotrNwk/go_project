@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/PiotrNwk/WebDev/tree/main/go/table"
+	"go_project/server/table"
 )
 
 func main() {
@@ -15,10 +15,10 @@ func main() {
 	}
 
 	// Serve the static folder
-	fs := http.FileServer(http.Dir("./static"))
-	http.Handle("/static/", http.StripPrefix("/static/", fs))
+	fs := http.FileServer(http.Dir("./client/public"))
+	http.Handle("/client/public/", http.StripPrefix("/client/public", fs))
 
-	tmpl := template.Must(template.ParseFiles("index.html"))
+	tmpl := template.Must(template.ParseFiles("./client/public/index.html"))
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		data := struct {

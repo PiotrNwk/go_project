@@ -1,3 +1,3 @@
-module github.com/PiotrNwk/WebDev/tree/main/go
+module go_project
 
 go 1.21.5

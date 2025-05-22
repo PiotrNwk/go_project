@@ -14,11 +14,10 @@ func main() {
 		port = "8080"
 	}
 
-	// Serve the static folder
-	fs := http.FileServer(http.Dir("./client/dist"))
+	fs := http.FileServer(http.Dir("./dist"))
 	http.Handle("/", fs)
 
-	tmpl := template.Must(template.ParseFiles("./client/dist/index.html"))
+	tmpl := template.Must(template.ParseFiles("./dist/index.html"))
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		data := struct {

@@ -14,10 +14,10 @@ func main() {
 		port = "8080"
 	}
 
-	fs := http.FileServer(http.Dir("./dist"))
-	http.Handle("/", fs)
+	fs := http.FileServer(http.Dir("./server/dist"))
+	http.Handle("/dist/", http.StripPrefix("/dist/", fs))
 
-	tmpl := template.Must(template.ParseFiles("./dist/index.html"))
+	tmpl := template.Must(template.ParseFiles("./server/dist/index.html"))
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		data := struct {

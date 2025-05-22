@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"os"
 
-	"go_project/server/table"
+	"go_project/table"
 )
 
 func main() {

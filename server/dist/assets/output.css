@@ -12,16 +12,12 @@
       --color-blue-500: oklch(62.3% 0.214 259.815);
       --color-blue-700: oklch(48.8% 0.243 264.376);
       --color-gray-100: oklch(96.7% 0.003 264.542);
-      --color-gray-200: oklch(92.8% 0.006 264.531);
-      --color-gray-300: oklch(87.2% 0.01 258.338);
-      --color-gray-400: oklch(70.7% 0.022 261.325);
       --color-gray-800: oklch(27.8% 0.033 256.848);
       --color-white: #fff;
       --spacing: 0.25rem;
       --text-2xl: 1.5rem;
       --text-2xl--line-height: calc(2 / 1.5);
       --font-weight-bold: 700;
-      --radius-lg: 0.5rem;
       --default-font-family: var(--font-sans);
       --default-mono-font-family: var(--font-mono);
     }
@@ -197,33 +193,8 @@
       .mb-4 {
         margin-bottom: calc(var(--spacing) * 4);
       }
-      .table {
-        display: table;
-      }
-      .w-full {
-        width: 100%;
-      }
-      .table-auto {
-        table-layout: auto;
-      }
-      .border-collapse {
-        border-collapse: collapse;
-      }
       .rounded {
         border-radius: 0.25rem;
-      }
-      .rounded-lg {
-        border-radius: var(--radius-lg);
-      }
-      .border {
-        border-style: var(--tw-border-style);
-        border-width: 1px;
-      }
-      .border-gray-300 {
-        border-color: var(--color-gray-300);
-      }
-      .border-gray-400 {
-        border-color: var(--color-gray-400);
       }
       .bg-blue-500 {
         background-color: var(--color-blue-500);
@@ -231,14 +202,8 @@
       .bg-gray-100 {
         background-color: var(--color-gray-100);
       }
-      .bg-gray-200 {
-        background-color: var(--color-gray-200);
-      }
       .bg-red-500 {
         background-color: var(--color-red-500);
-      }
-      .bg-white {
-        background-color: var(--color-white);
       }
       .p-4 {
         padding: calc(var(--spacing) * 4);
@@ -248,9 +213,6 @@
       }
       .py-2 {
         padding-block: calc(var(--spacing) * 2);
-      }
-      .text-left {
-        text-align: left;
       }
       .text-2xl {
         font-size: var(--text-2xl);
@@ -273,21 +235,10 @@
         --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
         box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
       }
-      .shadow-md {
-        --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
-        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-      }
       .hover\:bg-blue-700 {
         &:hover {
           @media (hover: hover) {
             background-color: var(--color-blue-700);
-          }
-        }
-      }
-      .hover\:bg-gray-100 {
-        &:hover {
-          @media (hover: hover) {
-            background-color: var(--color-gray-100);
           }
         }
       }
@@ -444,11 +395,6 @@
 @layer utilities {
   @layer utilities;
 }
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
@@ -521,7 +467,6 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;

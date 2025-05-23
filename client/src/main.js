@@ -1,2 +1,2 @@
-import './assets/styles/styles.css';
+import './assets/styles/input.css';
 

@@ -10,7 +10,7 @@ function App() {
       .then((data) => setMessage(data));
   }, []);
 
-  return <div>{message}</div>;
+  return <div>{message} - changed!</div>;
 }
 
 export default App;

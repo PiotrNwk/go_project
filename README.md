@@ -1,6 +1,14 @@
 go run .\server\ .
 npm run dev
 
+client/
+      └── dist/
+               └── assets
+      └── node_modules
+      └── src
+              └── assets
+              └── components
+
 
 # go_dynamic
 

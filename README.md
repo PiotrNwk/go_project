@@ -1,3 +1,7 @@
+go run .\server\ .
+npm run dev
+
+
 # go_dynamic
 
 my-app/

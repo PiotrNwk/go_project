@@ -1,5 +1,6 @@
-export const users = [
-  { name: "Alice", age: 30, email: "alice@example.com" },
-  { name: "Bob", age: 25, email: "bob@example.com" },
-  { name: "Charlie", age: 35, email: "charlie@example.com" },
+const usersData = [
+  { id: 1, name: "Alice", email: "alice@example.com" },
+  { id: 2, name: "Bob", email: "bob@example.com" }
 ];
+
+export default usersData;

@@ -1,4 +1,7 @@
+cd C:\Users\piotr\git\go_project
 go run .\server\ .
+
+cd client
 npm run dev
 
 client/

@@ -7,15 +7,19 @@ export default function Footer({ companyName = "Your Company", year = new Date()
         © {year} {companyName}. All rights reserved.
       </div>
       <div className="mt-2 space-x-4">
+        <a href="mailto:piotrnowak87@outlook.com" className="hover:underline">
+          Email
+        </a>
         <a href="https://github.com/PiotrNwk" target="_blank" rel="noreferrer" className="hover:underline">
           GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/piotr-nowak-380049155/" target="_blank" rel="noreferrer" className="hover:underline">
+          LinkedIn
         </a>
         <a href="https://x.com/ICRC" target="_blank" rel="noreferrer" className="hover:underline">
           X
         </a>
-        <a href="mailto:piotrnowak87@outlook.com" className="hover:underline">
-          Email
-        </a>
+        
       </div>
     </footer>
   );

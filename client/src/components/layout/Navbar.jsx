@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-md rounded-lg px-6 py-3 flex items-center justify-between mb-4">
       {/* Logo */}
-      <div className="text-xl font-bold text-gray-700">Chlooopie.</div>
+      <div className="text-xl font-bold text-gray-700">Showcase</div>
 
       {/* Links */}
       <ul className="flex gap-6"> {/* ✅ gap ensures spacing */}

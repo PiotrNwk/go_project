@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/layout/Navbar";
 import Table from "./components/Table/Table";
 import usersData from "./data/users"; // <-- import your local data
-import Footer from "./components/Footer";
+import Footer from "./components/layout/Footer";
 
 function App() {
   const [users, setUsers] = useState(usersData); // preload with local data

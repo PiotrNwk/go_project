@@ -8,7 +8,7 @@ export default function FilterButton({ label, active, onClick }) {
         ${
           active
             ? "bg-blue-700 text-white"
-            : "bg-blue-600 text-white hover:bg-blue-700"
+            : "bg-blue-600 text-white hover:bg-blue-800"
         }`}
     >
       {label}

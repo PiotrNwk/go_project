@@ -7,11 +7,11 @@ const Navbar = () => {
       <div className="text-xl font-bold text-gray-700">Showcase</div>
 
       {/* Links */}
-      <ul className="flex gap-6"> {/* ✅ gap ensures spacing */}
+      <ul className="flex gap-6">
         <li>
           <a
             href="#home"
-            className="text-gray-600 hover:text-blue-600 transition-colors"
+            className="text-gray-800 relative after:block after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all hover:after:w-full"
           >
             Home
           </a>
@@ -19,7 +19,7 @@ const Navbar = () => {
         <li>
           <a
             href="#about"
-            className="text-gray-600 hover:text-blue-600 transition-colors"
+            className="text-gray-800 relative after:block after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all hover:after:w-full"
           >
             About
           </a>
@@ -27,7 +27,7 @@ const Navbar = () => {
         <li>
           <a
             href="#services"
-            className="text-gray-600 hover:text-blue-600 transition-colors"
+            className="text-gray-800 relative after:block after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all hover:after:w-full"
           >
             Services
           </a>
@@ -35,7 +35,7 @@ const Navbar = () => {
         <li>
           <a
             href="#contact"
-            className="text-gray-600 hover:text-blue-600 transition-colors"
+            className="text-gray-800 relative after:block after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all hover:after:w-full"
           >
             Contact
           </a>
@@ -43,7 +43,7 @@ const Navbar = () => {
       </ul>
 
       {/* Button */}
-      <button className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition-colors">
+      <button className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-800 transition-colors">
         Sign In
       </button>
     </nav>

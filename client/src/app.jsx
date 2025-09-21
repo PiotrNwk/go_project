@@ -19,12 +19,13 @@ function App() {
       <Navbar />
 
       <main className="flex-1 p-4">
+
         {/* Toggle button */}
         <div className="mb-4">
           <button
             type="button"
             onClick={() => setShowFilters((prev) => !prev)}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-red-600 transition-colors duration-200"
+            className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-800 transition-colors duration-200"
           >
             Filters
           </button>

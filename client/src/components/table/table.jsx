@@ -7,6 +7,7 @@ const Table = ({ data }) => (
         <th className="border border-gray-300 px-4 py-2 text-left">Name</th>
         <th className="border border-gray-300 px-4 py-2 text-left">Age</th>
         <th className="border border-gray-300 px-4 py-2 text-left">Email</th>
+        <th className="border border-gray-300 px-4 py-2 text-left">Category</th>
       </tr>
     </thead>
     <tbody>
@@ -15,6 +16,7 @@ const Table = ({ data }) => (
           <td className="border border-gray-300 px-4 py-2">{row.name}</td>
           <td className="border border-gray-300 px-4 py-2">{row.age}</td>
           <td className="border border-gray-300 px-4 py-2">{row.email}</td>
+          <td className="border border-gray-300 px-4 py-2">{row.category}</td>
         </tr>
       ))}
     </tbody>

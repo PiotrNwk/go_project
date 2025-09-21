@@ -2,7 +2,9 @@ import { useState } from "react";
 import Navbar from "./components/layout/Navbar";
 import FilterButton from "./components/table/FilterButton";
 import Table from "./components/table/Table";
-import usersData from "./data/users"; // <-- import your local data
+import { filters } from "./data/filters";
+import usersData from "./data/users";
+import { filterUsers } from "./utils/filterUsers";
 import Footer from "./components/layout/Footer";
 
 function App() {
@@ -10,12 +12,7 @@ function App() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [showFilters, setShowFilters] = useState(false); // NEW toggle
 
-  const filters = ["All", "Name", "Age", "Email"];
-
-  const filteredUsers =
-    activeFilter === "All"
-      ? users
-      : users.filter((u) => u.category === activeFilter);
+  const filteredUsers = filterUsers(users, activeFilter);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -25,8 +22,9 @@ function App() {
         {/* Toggle button */}
         <div className="mb-4">
           <button
+            type="button"
             onClick={() => setShowFilters((prev) => !prev)}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition-colors"
+            className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-red-600 transition-colors duration-200"
           >
             Filters
           </button>
@@ -46,7 +44,9 @@ function App() {
           </div>
         )}
 
-        <div className="py-6 text-center">Static data loaded from frontend:</div>
+        <div className="py-6 text-center">
+          Static data loaded from frontend:
+        </div>
 
         {filteredUsers.length > 0 ? (
           <Table data={filteredUsers} />

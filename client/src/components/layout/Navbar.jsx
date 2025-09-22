@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -9,36 +9,44 @@ const Navbar = () => {
       {/* Links */}
       <ul className="flex gap-6">
         <li>
-          <a
-            href="#home"
+          <Link
+            to="/"
             className="text-gray-800 relative after:block after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all hover:after:w-full"
           >
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#about"
+          <Link
+            to="/users"
+            className="text-gray-800 relative after:block after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all hover:after:w-full"
+          >
+            Users
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/about"
             className="text-gray-800 relative after:block after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all hover:after:w-full"
           >
             About
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#services"
+          <Link
+            to="/services"
             className="text-gray-800 relative after:block after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all hover:after:w-full"
           >
             Services
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="text-gray-800 relative after:block after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all hover:after:w-full"
           >
             Contact
-          </a>
+          </Link>
         </li>
       </ul>
 

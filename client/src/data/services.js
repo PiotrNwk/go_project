@@ -1,0 +1,52 @@
+const servicesData = [
+  {
+    id: 1,
+    name: "db-prod-eu",
+    type: "PostgreSQL",
+    version: "14.3",
+    cpuCount: 8,
+    memoryGB: 32,
+    storageGB: 512,
+    logicalSpace: "production_cluster_eu",
+    schema: "public",
+    tablesCount: 128,
+    activeConnections: 42,
+    maxConnections: 200,
+    replication: true,
+    replicationMode: "asynchronous",
+    backupEnabled: true,
+    backupSchedule: "02:00 UTC",
+    status: "running",
+    region: "eu-central-1",
+    uptimeHours: 9845,
+    createdAt: "2023-07-10T12:34:56Z",
+    lastUpdated: "2025-10-20T09:12:00Z",
+    owner: "DataOps Team"
+  },
+  {
+    id: 2,
+    name: "db-staging-us",
+    type: "MySQL",
+    version: "8.0.32",
+    cpuCount: 4,
+    memoryGB: 16,
+    storageGB: 256,
+    logicalSpace: "staging_cluster_us",
+    schema: "analytics",
+    tablesCount: 54,
+    activeConnections: 10,
+    maxConnections: 100,
+    replication: false,
+    replicationMode: null,
+    backupEnabled: false,
+    backupSchedule: null,
+    status: "running",
+    region: "us-west-2",
+    uptimeHours: 1530,
+    createdAt: "2024-03-12T08:10:00Z",
+    lastUpdated: "2025-10-22T14:20:00Z",
+    owner: "DevOps Team"
+  }
+];
+
+export default servicesData;

@@ -4,7 +4,7 @@ import (
 	"os"
 )
 
-var isDev = os.Getenv("APP_ENV") == "development"
+var isDev = os.Getenv("APP_ENV") != "production"
 
 func getScriptTag() string {
 	if isDev {

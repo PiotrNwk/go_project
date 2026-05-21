@@ -7,7 +7,7 @@ import { filterUsers } from "../utils/filterUsers";
 
 export default function Users() {
   const [activeFilter, setActiveFilter] = useState("All");
-  const [showFilters, setShowFilters] = useState(true);
+  const [showFilters, setShowFilters] = useState(false);
 
   const filteredUsers = filterUsers(usersData, activeFilter);
 

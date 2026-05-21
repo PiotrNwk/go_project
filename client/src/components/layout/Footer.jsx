@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer({ companyName = "Your Company", year = new Date().getFullYear() }) {
   return (
-    <footer className="w-full bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 p-4 text-center text-sm text-gray-500 dark:text-gray-400">
+    <footer className="w-full bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 p-2 text-center text-sm text-gray-500 dark:text-gray-400">
       <div>
         © {year} {companyName}. All rights reserved.
       </div>

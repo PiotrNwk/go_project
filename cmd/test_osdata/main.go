@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"go_project/osdata"
+	"go_project/setup"
 )
 
 func main() {
@@ -14,4 +15,8 @@ func main() {
 	fmt.Printf("Hostname: %s\n", d.Hostname)
 	fmt.Printf("OS:       %s", d.OS)
 	fmt.Printf("CPUCores: %d\n", d.CPUCores)
+
+	var i string
+	i, err = setup.WslInstall("FedoraLinux-44")
+	fmt.Println(i)
 }

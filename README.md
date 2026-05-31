@@ -8,6 +8,7 @@ cd client
 npm run dev
 ```
 
+```
 client/
       └── dist/
                └── assets
@@ -15,6 +16,8 @@ client/
       └── src
               └── assets
               └── components
+```
+
 Structure
 my-app/
 │

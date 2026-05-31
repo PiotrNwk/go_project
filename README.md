@@ -18,7 +18,7 @@ client/
               └── components
 ```
 
-Structure
+Possible structure
 ```
 my-app/
 │

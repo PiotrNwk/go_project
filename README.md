@@ -19,6 +19,7 @@ client/
 ```
 
 Structure
+```
 my-app/
 │
 ├── backend/                  # Go (Golang) backend
@@ -52,3 +53,4 @@ my-app/
 ├── docker-compose.yml       # Optional Docker setup
 ├── README.md
 └── .gitignore
+```

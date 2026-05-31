@@ -37,3 +37,21 @@ func WslInstall(distro string) (string, error) {
 	}
 	return "", nil
 }
+
+func WslRun(distro string) error {
+	err := exec.Command("wsl.exe", "--list", "--running").Run()
+
+	if err != nil {
+		fmt.Println("No running WSL instances, starting...")
+	}
+
+	err = exec.Command("wsl.exe", "-d", distro).Run()
+
+	if err != nil {
+		return fmt.Errorf("WSL Run has caused an error: %w", err)
+	}
+
+	fmt.Printf("WSL %s started successfully", distro)
+
+	return nil
+}

@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"go_project/osdata"
 	"go_project/setup"
+	"log"
 )
 
 func main() {
@@ -19,4 +20,9 @@ func main() {
 	var i string
 	i, err = setup.WslInstall("FedoraLinux-44")
 	fmt.Println(i)
+
+	err = setup.WslRun("FedoraLinux-44")
+	if err != nil {
+		log.Fatal(err)
+	}
 }

@@ -1,8 +1,12 @@
+### go_project details
+
+```
 cd C:\Users\piotr\git\go_project
 go run .\server\ .
 
 cd client
 npm run dev
+```
 
 client/
       └── dist/
@@ -11,10 +15,7 @@ client/
       └── src
               └── assets
               └── components
-
-
-# go_dynamic
-
+Structure
 my-app/
 │
 ├── backend/                  # Go (Golang) backend

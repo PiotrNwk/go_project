@@ -1,6 +1,10 @@
 ### go_project details
 
 ```
+# Run app
+C:\Users\piotr\git\go_project\go_project.ps1
+
+# Or manually
 cd C:\Users\piotr\git\go_project
 go run .\server\ .
 

@@ -1,9 +1,18 @@
+### go_project details
+
+```
+# Run app
+C:\Users\piotr\git\go_project\go_project.ps1
+
+# Or manually
 cd C:\Users\piotr\git\go_project
 go run .\server\ .
 
 cd client
 npm run dev
+```
 
+```
 client/
       └── dist/
                └── assets
@@ -11,10 +20,10 @@ client/
       └── src
               └── assets
               └── components
+```
 
-
-# go_dynamic
-
+Possible structure
+```
 my-app/
 │
 ├── backend/                  # Go (Golang) backend
@@ -48,3 +57,4 @@ my-app/
 ├── docker-compose.yml       # Optional Docker setup
 ├── README.md
 └── .gitignore
+```
